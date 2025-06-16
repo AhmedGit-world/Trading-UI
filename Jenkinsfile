@@ -27,7 +27,7 @@ pipeline {
                         sh 'npm audit fix'
 
                         echo "Running npm install..."
-                        sh 'npm install'
+                        sh 'npm install --force'
 
                         echo "Running npm run build..."
                         def packageJson = readJSON text: readFile(file: 'package.json')
