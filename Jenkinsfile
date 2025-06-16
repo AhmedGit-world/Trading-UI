@@ -24,7 +24,7 @@ pipeline {
                 script {
                     withEnv(["PATH+NODE=${tool NODE_VERSION_TOOL_NAME}/bin"]) {
                         echo "Running npm audit fix..."
-                        sh 'npm audit fix'
+                        sh 'npm audit fix --force'
 
                         echo "Running npm install..."
                         sh 'npm install --force'
